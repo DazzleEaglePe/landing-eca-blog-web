@@ -1,0 +1,194 @@
+"use client";
+
+import React, { useState, useRef } from 'react';
+import Image from 'next/image';
+import { Volume2, VolumeX } from 'lucide-react';
+import { Button } from '@/components/atoms/Button';
+import { Services } from '../Services';
+
+const features = [
+  { text: "Equipo especializado en", bold: "contabilidad empresarial." },
+  { text: "Tecnología de punta para", bold: "procesos eficientes." },
+  { text: "Comunicación", bold: "constante y reportes claros." },
+];
+
+const socialIcons = [
+  { src: "/icons/TIKTOK WHITE.svg", alt: "TikTok", href: "https://www.tiktok.com/@eca.contabilidad" },
+  { src: "/icons/FACEBOOK WHITE.svg", alt: "Facebook", href: "#" },
+  { src: "/icons/INSTAGRAM WHITE.svg", alt: "Instagram", href: "#" },
+  { src: "/icons/LINKEDIN WHITE.svg", alt: "LinkedIn", href: "#" },
+];
+
+export const ServiceAction = () => {
+  const [isMuted, setIsMuted] = useState(true);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  // Forzar reproducción y muteado para navegadores estrictos (Safari/Chrome)
+  React.useEffect(() => {
+    if (videoRef.current) {
+      videoRef.current.defaultMuted = true;
+      videoRef.current.muted = true;
+      videoRef.current.play().catch(error => {
+        console.log("Autoplay was prevented:", error);
+      });
+    }
+  }, []);
+
+  const toggleMute = () => {
+    if (videoRef.current) {
+      videoRef.current.muted = !isMuted;
+      setIsMuted(!isMuted);
+    }
+  };
+
+  return (
+    <section className="relative bg-white">
+
+      {/* BG Blue – anclado al fondo, sin recorte */}
+      {/* eslint-disable-next-line @next/next/no-img-element */}
+      <img
+        src="/images/BG BLUE.png"
+        alt=""
+        aria-hidden="true"
+        className="absolute bottom-[-40px] left-0 w-full pointer-events-none"
+        style={{ zIndex: 0, transform: 'scaleY(0.75)', transformOrigin: 'bottom center' }}
+      />
+
+      <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-20 relative z-10">
+        <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
+          
+          {/* Left Column */}
+          <div className="flex-1 max-w-xl">
+            {/* Subtitle */}
+            <p className="text-[#456693] text-base md:text-lg mb-4 flex items-center gap-3 font-light tracking-wide">
+              <span className="w-6 h-[1.5px] bg-[#456693]/50 inline-block"></span>
+              ¿Cómo trabajamos?
+            </p>
+
+            {/* Heading */}
+            <h2 className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl text-[#0a0a0a] leading-[1.1] mb-6">
+              <span className="font-light">Conoce nuestro</span>
+              <br />
+              <span className="font-medium">servicio en acción.</span>
+            </h2>
+
+            {/* Subheading */}
+            <p className="text-[rgba(0,0,0,0.57)] text-xl md:text-2xl lg:text-3xl font-light leading-snug mb-6">
+              ¿Por qué las empresas
+              <br />
+              confían en nuestra gestión
+              <br />
+              contable?
+            </p>
+
+            {/* Feature List */}
+            <div className="flex flex-col gap-5">
+              {features.map((feature, index) => (
+                <div key={index} className="flex items-center gap-4">
+                  <div className="w-7 h-7 rounded-full bg-[#0049B2] flex items-center justify-center flex-shrink-0">
+                    <Image
+                      src="/icons/CHECK ICON.svg"
+                      alt="check"
+                      width={16}
+                      height={16}
+                    />
+                  </div>
+                  <p className="text-[#1a1a1a] text-base md:text-lg lg:text-xl font-light">
+                    {feature.text} <span className="font-bold">{feature.bold}</span>
+                  </p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* Right Column */}
+          <div className="flex-1 w-full flex flex-col items-center lg:items-end">
+            {/* Social Media Header */}
+            <div className="mb-8 w-full max-w-[400px]">
+              <div className="flex items-center gap-3 mb-2">
+                <Image
+                  src="/icons/LINK ICON.svg"
+                  alt="link"
+                  width={24}
+                  height={24}
+                />
+                <span className="text-[#0a0a0a] font-bold text-lg md:text-xl">Síguenos en nuestras redes</span>
+              </div>
+              <p className="text-[#456693] text-sm md:text-base font-light leading-snug ml-9">
+                Consejos contables, novedades
+                <br />
+                tributarias y casos de éxito
+              </p>
+
+              {/* Social Icons */}
+              <div className="flex items-center gap-4 mt-4 ml-9">
+                {socialIcons.map((icon, index) => (
+                  <a
+                    key={index}
+                    href={icon.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="w-10 h-10 bg-[#0049B2] rounded-full flex items-center justify-center hover:bg-[#003d99] transition-colors"
+                  >
+                    <Image
+                      src={icon.src}
+                      alt={icon.alt}
+                      width={20}
+                      height={20}
+                      className="object-contain"
+                    />
+                  </a>
+                ))}
+              </div>
+            </div>
+
+            {/* Video Player */}
+            <div className="relative bg-[#0a0a0a] rounded-[2rem] overflow-hidden aspect-[3/4] w-full max-w-[380px] lg:max-w-[400px] shadow-2xl group">
+              <video 
+                ref={videoRef}
+                autoPlay 
+                loop 
+                muted 
+                playsInline
+                className="w-full h-full object-cover"
+                src="/videos/preview.mp4"
+              >
+                Tu navegador no soporta el formato de video.
+              </video>
+
+              {/* Gradient Overlay for better text/button visibility */}
+              <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent pointer-events-none" />
+
+              {/* Mute/Unmute Toggle */}
+              <button 
+                onClick={toggleMute}
+                className="absolute top-6 right-6 w-10 h-10 bg-black/40 backdrop-blur-md rounded-full flex items-center justify-center text-white hover:bg-black/60 transition-colors z-10"
+                aria-label={isMuted ? "Quitar silencio" : "Silenciar video"}
+              >
+                {isMuted ? <VolumeX size={18} /> : <Volume2 size={18} />}
+              </button>
+
+              {/* CTA Button at bottom-right */}
+              <div className="absolute bottom-6 right-6 z-10">
+                <button className="bg-white hover:bg-white/90 text-[#0049B2] flex items-center justify-center gap-2 font-medium text-xs md:text-sm px-5 py-3 rounded-full shadow-lg transition-all whitespace-nowrap">
+                  CONOCE MÁS AQUÍ
+                  <Image
+                    src="/icons/ICON WHATSAPP BLUE.svg"
+                    alt="whatsapp"
+                    width={18}
+                    height={18}
+                  />
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* Services Section sits on top of the blue wave */}
+      <div className="relative z-10 w-full">
+        <Services />
+      </div>
+    </section>
+  );
+};
