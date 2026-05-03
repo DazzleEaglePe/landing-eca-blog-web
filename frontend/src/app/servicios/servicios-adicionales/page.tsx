@@ -2,8 +2,8 @@ import { ServiceDetail } from "@/components/organisms/ServiceDetail";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Servicios Adicionales | ECA Soluciones Empresariales",
-  description: "Consultoría integral para el crecimiento de su negocio. Constitución de empresas, trámites administrativos y más.",
+  title: "Servicios Adicionales",
+  description: "Consultoría integral para el crecimiento de su negocio en Perú. Especialistas en constitución de empresas, trámites administrativos y soporte 360°.",
 };
 
 export default function ServiciosAdicionalesPage() {

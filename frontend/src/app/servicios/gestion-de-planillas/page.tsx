@@ -2,8 +2,8 @@ import { ServiceDetail } from "@/components/organisms/ServiceDetail";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gestión de Planillas | ECA Soluciones Empresariales",
-  description: "Administración eficiente de recursos humanos y nóminas. Garantizamos el cumplimiento laboral y la puntualidad en sus pagos.",
+  title: "Gestión de Planillas",
+  description: "Administración eficiente de recursos humanos y nóminas en Perú. Garantizamos el cálculo preciso de remuneraciones, beneficios sociales y cumplimiento laboral.",
 };
 
 export default function GestionPlanillasPage() {

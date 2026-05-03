@@ -1,9 +1,13 @@
-"use client";
-
 import React from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Brands } from '@/components/organisms/Brands/Brands';
+import { Metadata } from 'next';
+
+export const metadata: Metadata = {
+  title: "Sobre Nosotros",
+  description: "Conoce a ECA Soluciones Empresariales. Somos un equipo de profesionales especializados en ofrecer soluciones contables, financieras y tributarias para el crecimiento de tu empresa.",
+};
 
 const team = [
   { name: "Edith Álvarez", role: "Contadora General", initials: "EA" },

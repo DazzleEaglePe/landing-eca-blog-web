@@ -2,8 +2,8 @@ import { ServiceDetail } from "@/components/organisms/ServiceDetail";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Gestión Contable | ECA Soluciones Empresariales",
-  description: "Optimice sus finanzas con nuestra gestión contable experta. Reportes claros, cumplimiento tributario y asesoría estratégica para su empresa.",
+  title: "Gestión Contable",
+  description: "Optimice sus finanzas con nuestra gestión contable experta en Perú. Reportes claros, cumplimiento tributario ante SUNAT y asesoría estratégica para Mypes.",
 };
 
 export default function GestionContablePage() {

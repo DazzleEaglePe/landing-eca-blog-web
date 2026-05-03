@@ -2,8 +2,8 @@ import { Contact } from "@/components/organisms/Contact";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Contáctanos | ECA Soluciones Empresariales",
-  description: "Ponte en contacto con nuestro equipo de profesionales en soluciones contables y empresariales.",
+  title: "Contáctanos",
+  description: "¿Tienes dudas sobre tu contabilidad o impuestos? Ponte en contacto con los expertos de ECA Soluciones Empresariales SAC. Estamos listos para asesorarte y potenciar tu negocio.",
 };
 
 export default function ContactanosPage() {

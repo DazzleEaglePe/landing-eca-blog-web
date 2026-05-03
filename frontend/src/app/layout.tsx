@@ -48,8 +48,37 @@ const madeTommy = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "ECA Soluciones Empresariales SAC",
-  description: "Soluciones contables, financieras y tributarias para micro y pequeñas empresas en Perú.",
+  title: {
+    default: "ECA Soluciones Empresariales | Consultoría Contable y Tributaria en Perú",
+    template: "%s | ECA Soluciones Empresariales"
+  },
+  description: "ECA Soluciones Empresariales SAC ofrece servicios de gestión contable, planillas, outsourcing tributario y consultoría financiera para Mypes y empresas en Perú. Expertos en SUNAT y cumplimiento normativo.",
+  keywords: ["contabilidad perú", "estudio contable lima", "outsourcing tributario", "gestión de planillas", "asesoría financiera", "constitución de empresas", "SUNAT", "ECA Soluciones"],
+  authors: [{ name: "ECA Soluciones Empresariales SAC" }],
+  creator: "ECA Soluciones",
+  publisher: "ECA Soluciones",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
+  openGraph: {
+    title: "ECA Soluciones Empresariales | Tu Aliado Estratégico en Perú",
+    description: "Soluciones contables y tributarias integrales para el crecimiento de tu empresa. Gestión eficiente y personalizada.",
+    url: "https://ecasoluciones.pe", // Asumiendo este dominio, cambiar si es necesario
+    siteName: "ECA Soluciones",
+    locale: "es_PE",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ECA Soluciones Empresariales | Consultoría Contable",
+    description: "Expertos en gestión contable y tributaria en Perú. Impulsamos el crecimiento de tu negocio.",
+  },
+  robots: {
+    index: true,
+    follow: true,
+  },
 };
 
 export default function RootLayout({
