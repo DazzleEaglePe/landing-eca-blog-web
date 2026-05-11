@@ -12,7 +12,7 @@ export default function GestionContablePage() {
       title="Gestión Contable Integral"
       subtitle="Optimización Financiera"
       description="Transformamos su contabilidad en una herramienta estratégica para la toma de decisiones. Brindamos soporte completo en registros contables, estados financieros y cumplimiento normativo."
-      image="/images/service-contable.png"
+      image="/images/servicio-gestion-contable-eca.png"
       features={[
         "Contabilidad externa y asesoría",
         "Estados financieros mensuales",

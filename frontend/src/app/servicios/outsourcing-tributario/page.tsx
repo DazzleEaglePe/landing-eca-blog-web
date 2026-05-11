@@ -12,7 +12,7 @@ export default function OutsourcingTributarioPage() {
       title="Outsourcing Tributario Estratégico"
       subtitle="Estrategia Fiscal"
       description="Brindamos seguridad fiscal a su empresa. Realizamos una planificación tributaria preventiva para optimizar sus recursos y asegurar el cumplimiento de todas las obligaciones ante la SUNAT."
-      image="/images/service-tributario.png"
+      image="/images/servicio-outsourcing-tributario-eca.png"
       features={[
         "Planificación tributaria anual",
         "Determinación de impuestos (IGV, Renta)",

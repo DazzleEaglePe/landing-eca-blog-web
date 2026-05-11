@@ -73,11 +73,11 @@ export const Testimonials = () => {
       <div className="container mx-auto px-4 lg:px-8">
         
         {/* Main Title - Centered */}
-        <div className="testimonials-header text-center mb-20 lg:mb-28">
-          <h2 className="text-4xl md:text-5xl lg:text-7xl text-[#0a0a0a] font-light leading-[1.1] tracking-tight">
+        <div className="testimonials-header text-center mb-12 sm:mb-20 lg:mb-28">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl text-[#0a0a0a] font-light leading-[1.1] tracking-tight">
             Lo que nuestros clientes,
-            <br />
-            <span className="font-medium">dicen de nosotros.</span>
+            <br className="hidden sm:block" />
+            <span className="sm:hidden"> </span><span className="font-medium">dicen de nosotros.</span>
           </h2>
         </div>
 
@@ -147,17 +147,17 @@ export const Testimonials = () => {
                 <SwiperSlide key={item.id} className="testimonial-card">
                   <div className="flex flex-col gap-6 h-full">
                     {/* Blue Card */}
-                    <div className="bg-[#0049B2] rounded-[2.5rem] p-8 lg:p-12 text-white flex-1 min-h-[340px] flex flex-col justify-between shadow-lg relative group overflow-hidden">
-                      <div className="absolute top-8 right-8 opacity-5">
-                         <svg width="60" height="48" viewBox="0 0 60 48" fill="none">
+                    <div className="bg-[#0049B2] rounded-[2.5rem] p-6 sm:p-8 lg:p-12 text-white flex-1 min-h-[280px] sm:min-h-[340px] flex flex-col justify-between shadow-lg relative group overflow-hidden">
+                      <div className="absolute top-8 right-8 opacity-5 w-10 h-8 sm:w-auto sm:h-auto">
+                         <svg width="60" height="48" viewBox="0 0 60 48" fill="none" className="w-full h-full">
                             <path d="M14.4 0C22.353 0 28.8 6.447 28.8 14.4V48H0V14.4C0 6.447 6.447 0 14.4 0ZM45.6 0C53.553 0 60 6.447 60 14.4V48H31.2V14.4C31.2 6.447 37.647 0 45.6 0Z" fill="white" />
                          </svg>
                       </div>
 
-                      <p className="text-lg lg:text-xl font-normal leading-relaxed">
+                      <p className="text-base sm:text-lg lg:text-xl font-normal leading-relaxed mt-4 sm:mt-0 relative z-10">
                         {item.mainText}
                       </p>
-                      <p className="text-sm lg:text-base font-light opacity-60 mt-6 border-t border-white/10 pt-8">
+                      <p className="text-xs sm:text-sm lg:text-base font-light opacity-60 mt-6 border-t border-white/10 pt-6 sm:pt-8">
                         {item.quote}
                       </p>
                     </div>

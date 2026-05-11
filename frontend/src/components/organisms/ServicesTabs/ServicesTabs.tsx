@@ -225,8 +225,8 @@ export const ServicesTabs = () => {
             >
               Recibir más información
               <Image
-                src="/icons/WHATSAP-ICON.svg"
-                alt="WhatsApp"
+                src="/icons/icono-whatsapp-verde-eca.svg"
+                alt="Solicitar información por WhatsApp ECA"
                 width={28}
                 height={28}
                 className="transition-transform"
@@ -234,11 +234,11 @@ export const ServicesTabs = () => {
             </a>
           </div>
 
-          {/* Right: CUADRO BLUE */}
-          <div className="flex-shrink-0 w-full lg:w-[40%] aspect-square relative rounded-[2.5rem] overflow-hidden shadow-xl">
+          {/* Right: Grafico Informativo */}
+          <div className="flex-shrink-0 w-full lg:w-[40%] aspect-[4/3] lg:aspect-square relative rounded-[2.5rem] overflow-hidden shadow-xl mt-4 lg:mt-0">
             <Image
-              src="/images/CUADRO BLUE.png"
-              alt="ECA servicios"
+              src="/images/grafico-servicios-blue-eca.png"
+              alt="Servicios Contables y Empresariales de ECA Asesores"
               fill
               sizes="(max-width: 1024px) 100vw, 40vw"
               className="object-cover"

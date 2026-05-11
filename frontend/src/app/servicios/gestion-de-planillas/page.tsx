@@ -12,7 +12,7 @@ export default function GestionPlanillasPage() {
       title="Gestión Eficiente de Planillas"
       subtitle="Recursos Humanos"
       description="Externalice su nómina con total seguridad. Nos encargamos del cálculo preciso de remuneraciones, beneficios sociales y el cumplimiento estricto de la legislación laboral vigente."
-      image="/images/service-planillas.png"
+      image="/images/servicio-gestion-planillas-eca.png"
       features={[
         "Elaboración de planillas mensuales",
         "Cálculo de CTS, Gratificaciones y Vacaciones",

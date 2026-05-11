@@ -40,11 +40,11 @@ export const Header = () => {
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
           <Image 
-            src="/images/logo-eca.png" 
-            alt="ECA Soluciones Empresariales SAC Logo" 
+            src="/images/logo-eca-asesores-contables.png" 
+            alt="ECA Asesores Contables Logo" 
             width={180} 
             height={60} 
-            className="h-12 w-auto md:h-14 lg:h-16 object-contain"
+            className="h-10 w-auto md:h-14 lg:h-16 object-contain"
             priority
           />
         </Link>
@@ -105,18 +105,20 @@ export const Header = () => {
           </Link>
         </nav>
 
-        {/* Action Buttons */}
+        {/* Action Buttons (Desktop Only) */}
         <div className="hidden lg:flex items-center gap-3">
-          <Button className="flex items-center gap-2 font-normal">
-            CONTACTANOS
-            <Image 
-              src="/icons/ICON WHATSAPP BLUE.svg" 
-              alt="WhatsApp" 
-              width={20} 
-              height={20} 
-              className="brightness-0 invert" 
-            />
-          </Button>
+          <a href="https://wa.me/51923341098" target="_blank" rel="noopener noreferrer">
+            <Button className="flex items-center gap-2 font-normal">
+              CONTACTANOS
+              <Image 
+                src="/icons/icono-whatsapp-azul-eca.svg" 
+                alt="Contacto WhatsApp ECA" 
+                width={20} 
+                height={20} 
+                className="brightness-0 invert" 
+              />
+            </Button>
+          </a>
           <Link href="/contactanos">
             <Button variant="outline" className="font-normal px-6">
               AGENDA TU CITA
@@ -124,14 +126,30 @@ export const Header = () => {
           </Link>
         </div>
 
-        {/* Mobile Menu Toggle */}
-        <button 
-          className="lg:hidden p-2 text-primary hover:bg-primary-50 rounded-lg transition-colors"
-          onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-          aria-label="Toggle mobile menu"
-        >
-          <Menu size={24} />
-        </button>
+        {/* Mobile Actions Container */}
+        <div className="flex lg:hidden items-center gap-2">
+          {/* Quick Contact Button (Small) */}
+          <a href="https://wa.me/51923341098" target="_blank" rel="noopener noreferrer">
+            <Button size="sm" className="px-3 h-10">
+              <Image 
+                src="/icons/icono-whatsapp-azul-eca.svg" 
+                alt="Contacto WhatsApp ECA" 
+                width={18} 
+                height={18} 
+                className="brightness-0 invert" 
+              />
+            </Button>
+          </a>
+
+          {/* Mobile Menu Toggle */}
+          <button 
+            className="p-2 text-primary hover:bg-primary-50 rounded-lg transition-colors border border-gray-100"
+            onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
+          >
+            {isMobileMenuOpen ? <X size={24} /> : <Menu size={24} />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile Menu */}
@@ -164,8 +182,8 @@ export const Header = () => {
             <Button className="w-full justify-center">
               CONTACTANOS
               <Image 
-                src="/icons/ICON WHATSAPP BLUE.svg" 
-                alt="WhatsApp" 
+                src="/icons/icono-whatsapp-azul-eca.svg" 
+                alt="Contacto WhatsApp ECA" 
                 width={20} 
                 height={20} 
                 className="brightness-0 invert ml-2" 

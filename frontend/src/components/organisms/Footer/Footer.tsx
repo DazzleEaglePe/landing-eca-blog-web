@@ -38,8 +38,8 @@ export const Footer = () => {
           <div className="lg:col-span-5 pr-0 lg:pr-12">
             <Link href="/" className="inline-block mb-6">
               <Image 
-                src="/images/logo-eca-whiter.svg" 
-                alt="ECA Logo" 
+                src="/images/logo-eca-asesores-blanco.svg" 
+                alt="ECA Asesores Contables - Logo Blanco" 
                 width={200} 
                 height={60} 
                 className="h-auto w-[200px]"
@@ -62,6 +62,12 @@ export const Footer = () => {
                   <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M22 6l-10 7L2 6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
                 </div>
                 <span>consultores.solucioneseca1@gmail.com</span>
+              </div>
+              <div className="flex items-center gap-3">
+                <div className="w-10 h-10 rounded-full bg-white/5 flex items-center justify-center flex-shrink-0">
+                  <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><circle cx="12" cy="10" r="3" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                </div>
+                <span>Calle Cosme y Bueno 222 Urb. Salamanca de Monterrico - Ate</span>
               </div>
             </div>
           </div>
@@ -102,22 +108,25 @@ export const Footer = () => {
         {/* Separator */}
         <div className="h-[1px] w-full bg-gradient-to-r from-transparent via-white/10 to-transparent mb-8" />
 
-        {/* Bottom Social & Copyright */}
-        <div className="flex flex-col md:flex-row items-center justify-between gap-6">
-          
-          <div className="flex flex-wrap items-center justify-center md:justify-start gap-4">
+        {/* Bottom Bar: Copyright Left, Socials Right */}
+        <div className="flex flex-col md:flex-row items-center justify-between gap-6 py-4">
+          <p className="text-white/40 text-sm font-light text-center md:text-left">
+            © {new Date().getFullYear()} ECA Soluciones Empresariales SAC. Todos los derechos reservados.
+          </p>
+
+          <div className="flex items-center gap-4">
              {[
-               { src: '/icons/TIKTOK WHITE.svg', alt: 'TikTok', href: 'https://www.tiktok.com/@eca.contabilidad' },
-               { src: '/icons/FACEBOOK WHITE.svg', alt: 'Facebook', href: '#' },
-               { src: '/icons/INSTAGRAM WHITE.svg', alt: 'Instagram', href: '#' },
-               { src: '/icons/LINKEDIN WHITE.svg', alt: 'LinkedIn', href: '#' },
+               { src: '/icons/icono-tiktok-blanco-eca.svg', alt: 'TikTok ECA Asesores', href: 'https://www.tiktok.com/@eca.contabilidad?_t=ZM-8unOwfwtmPX&_r=1' },
+               { src: '/icons/icono-facebook-blanco-eca.svg', alt: 'Facebook ECA Asesores', href: '#' },
+               { src: '/icons/icono-instagram-blanco-eca.svg', alt: 'Instagram CPC Edith Alvarez - ECA Asesores', href: 'https://www.instagram.com/cpcedithalvarez/' },
+               { src: '/icons/icono-linkedin-blanco-eca.svg', alt: 'LinkedIn ECA Asesores', href: '#' },
              ].map((social, i) => (
                <a 
                  key={i} 
                  href={social.href}
                  target="_blank"
                  rel="noopener noreferrer"
-                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center transition-colors hover:bg-[#0049B2] hover:border-[#0049B2]"
+                 className="w-10 h-10 rounded-full bg-white/5 border border-white/10 flex items-center justify-center transition-all hover:bg-[#0049B2] hover:border-[#0049B2] hover:-translate-y-1"
                >
                  <Image 
                    src={social.src} 
@@ -129,11 +138,6 @@ export const Footer = () => {
                </a>
              ))}
           </div>
-
-          <p className="text-white/40 text-sm font-light text-center md:text-right">
-            © {new Date().getFullYear()} ECA Soluciones Empresariales SAC. <br className="md:hidden" /> Todos los derechos reservados.
-          </p>
-
         </div>
       </div>
     </footer>

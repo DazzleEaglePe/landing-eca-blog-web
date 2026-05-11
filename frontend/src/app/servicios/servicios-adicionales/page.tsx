@@ -12,7 +12,7 @@ export default function ServiciosAdicionalesPage() {
       title="Constitución de Empresas y Soporte 360°"
       subtitle="Aliados Estratégicos"
       description="¡Constituye tu empresa rápida, digital y segura! Te acompañamos en cada etapa de tu negocio, simplificando tu contabilidad y asegurando el cumplimiento tributario desde el primer día."
-      image="/images/service-adicionales.png"
+      image="/images/servicios-asesoria-negocios-eca.png"
       features={[
         "Constitución de empresas (E.I.R.L, S.A.C, S.R.L)",
         "Trámites ante SUNARP, SUNAT y Municipalidades",

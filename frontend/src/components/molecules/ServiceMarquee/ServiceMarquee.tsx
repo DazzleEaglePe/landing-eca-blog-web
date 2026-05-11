@@ -26,7 +26,7 @@ export const ServiceMarquee = () => {
             </span>
             <div className="ml-6 lg:ml-10 flex-shrink-0">
               <Image
-                src="/icons/ICON HEADER CRRUSEL.svg"
+                src="/icons/icono-cabecera-carrusel-eca.svg"
                 alt="separator"
                 width={60}
                 height={60}

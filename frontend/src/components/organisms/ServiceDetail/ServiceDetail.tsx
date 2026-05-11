@@ -36,7 +36,7 @@ export const ServiceDetail = ({ title, subtitle, description, image, features }:
                   <div key={i} className="flex items-center gap-4 group">
                     <div className="w-6 h-6 rounded-full bg-[#0049B2] flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110">
                       <Image
-                        src="/icons/CHECK ICON.svg"
+                        src="/icons/icono-check-azul-eca.svg"
                         alt="check"
                         width={12}
                         height={12}
@@ -78,21 +78,21 @@ export const ServiceDetail = ({ title, subtitle, description, image, features }:
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <div className="p-8 rounded-[2rem] bg-[#f8faff] hover:shadow-md transition-shadow">
               <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm mx-auto">
-                 <Image src="/icons/ICON ENTERPRISE.svg" alt="" width={24} height={24} />
+                 <Image src="/icons/icono-empresa-servicios-eca.svg" alt="" width={24} height={24} />
               </div>
               <h3 className="text-xl font-medium text-[#011F44] mb-4">Experiencia Real</h3>
               <p className="text-gray-500 font-light">Contamos con un equipo de profesionales con amplia trayectoria en el sector.</p>
             </div>
             <div className="p-8 rounded-[2rem] bg-[#f8faff] hover:shadow-md transition-shadow">
               <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm mx-auto">
-                 <Image src="/icons/ICON FORM.svg" alt="" width={24} height={24} />
+                 <Image src="/icons/icono-formulario-contacto-eca.svg" alt="" width={24} height={24} />
               </div>
               <h3 className="text-xl font-medium text-[#011F44] mb-4">Soluciones a Medida</h3>
               <p className="text-gray-500 font-light">Adaptamos nuestros procesos a las necesidades específicas de tu empresa.</p>
             </div>
             <div className="p-8 rounded-[2rem] bg-[#f8faff] hover:shadow-md transition-shadow">
               <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm mx-auto">
-                 <Image src="/icons/ICON CUADRO.svg" alt="" width={24} height={24} />
+                 <Image src="/icons/icono-cuadro-decorativo-eca.svg" alt="" width={24} height={24} />
               </div>
               <h3 className="text-xl font-medium text-[#011F44] mb-4">Tecnología Avanzada</h3>
               <p className="text-gray-500 font-light">Utilizamos las mejores herramientas para garantizar eficiencia y precisión.</p>

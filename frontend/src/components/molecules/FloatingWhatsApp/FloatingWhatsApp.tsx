@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 export const FloatingWhatsApp = () => {
   // Número de WhatsApp (puedes cambiarlo aquí)
-  const phoneNumber = "51999999999"; 
+  const phoneNumber = "51923341098"; 
   const message = "Hola, me gustaría recibir asesoría contable para mi empresa.";
   const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodeURIComponent(message)}`;
 
@@ -16,7 +16,7 @@ export const FloatingWhatsApp = () => {
       aria-label="Contactar por WhatsApp"
     >
       <Image
-        src="/icons/WHATSAP-ICON.svg"
+        src="/icons/icono-whatsapp-verde-eca.svg"
         alt="WhatsApp"
         width={32}
         height={32}

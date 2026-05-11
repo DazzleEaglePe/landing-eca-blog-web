@@ -13,10 +13,10 @@ const features = [
 ];
 
 const socialIcons = [
-  { src: "/icons/TIKTOK WHITE.svg", alt: "TikTok", href: "https://www.tiktok.com/@eca.contabilidad" },
-  { src: "/icons/FACEBOOK WHITE.svg", alt: "Facebook", href: "#" },
-  { src: "/icons/INSTAGRAM WHITE.svg", alt: "Instagram", href: "#" },
-  { src: "/icons/LINKEDIN WHITE.svg", alt: "LinkedIn", href: "#" },
+  { src: "/icons/icono-tiktok-blanco-eca.svg", alt: "TikTok", href: "https://www.tiktok.com/@eca.contabilidad?_t=ZM-8unOwfwtmPX&_r=1" },
+  { src: "/icons/icono-facebook-blanco-eca.svg", alt: "Facebook", href: "#" },
+  { src: "/icons/icono-instagram-blanco-eca.svg", alt: "Instagram", href: "https://www.instagram.com/cpcedithalvarez/" },
+  { src: "/icons/icono-linkedin-blanco-eca.svg", alt: "LinkedIn", href: "#" },
 ];
 
 export const ServiceAction = () => {
@@ -47,14 +47,14 @@ export const ServiceAction = () => {
       {/* BG Blue – anclado al fondo, sin recorte */}
       {/* eslint-disable-next-line @next/next/no-img-element */}
       <img
-        src="/images/BG BLUE.png"
+        src="/images/fondo-azul-moderno-eca-consultores.png"
         alt=""
         aria-hidden="true"
-        className="absolute bottom-[-40px] left-0 w-full pointer-events-none"
+        className="absolute bottom-[30px] left-0 w-full pointer-events-none hidden lg:block"
         style={{ zIndex: 0, transform: 'scaleY(0.75)', transformOrigin: 'bottom center' }}
       />
 
-      <div className="container mx-auto px-4 lg:px-8 py-16 lg:py-20 relative z-10">
+      <div className="container mx-auto px-4 lg:px-8 pt-12 pb-6 lg:py-20 relative z-10">
         <div className="flex flex-col lg:flex-row gap-12 lg:gap-16 items-start">
           
           {/* Left Column */}
@@ -66,19 +66,19 @@ export const ServiceAction = () => {
             </p>
 
             {/* Heading */}
-            <h2 className="text-4xl md:text-4xl lg:text-5xl xl:text-6xl text-[#0a0a0a] leading-[1.1] mb-6">
+            <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-[#0a0a0a] leading-[1.1] mb-4 md:mb-6">
               <span className="font-light">Conoce nuestro</span>
               <br />
               <span className="font-medium">servicio en acción.</span>
             </h2>
 
             {/* Subheading */}
-            <p className="text-[rgba(0,0,0,0.57)] text-xl md:text-2xl lg:text-3xl font-light leading-snug mb-6">
+            <p className="text-[rgba(0,0,0,0.57)] text-lg sm:text-xl md:text-2xl lg:text-3xl font-light leading-snug mb-6">
               ¿Por qué las empresas
-              <br />
-              confían en nuestra gestión
-              <br />
-              contable?
+              <br className="hidden sm:block" />
+              <span className="sm:hidden"> </span>confían en nuestra gestión
+              <br className="hidden sm:block" />
+              <span className="sm:hidden"> </span>contable?
             </p>
 
             {/* Feature List */}
@@ -87,7 +87,7 @@ export const ServiceAction = () => {
                 <div key={index} className="flex items-center gap-4">
                   <div className="w-7 h-7 rounded-full bg-[#0049B2] flex items-center justify-center flex-shrink-0">
                     <Image
-                      src="/icons/CHECK ICON.svg"
+                      src="/icons/icono-check-azul-eca.svg"
                       alt="check"
                       width={16}
                       height={16}
@@ -102,22 +102,22 @@ export const ServiceAction = () => {
           </div>
 
           {/* Right Column */}
-          <div className="flex-1 w-full flex flex-col items-center lg:items-end">
+          <div className="flex-1 w-full flex flex-col items-center lg:items-end mt-4 lg:mt-0">
             {/* Social Media Header */}
             <div className="mb-8 w-full max-w-[400px]">
               <div className="flex items-center gap-3 mb-2">
                 <Image
-                  src="/icons/LINK ICON.svg"
+                  src="/icons/icono-enlace-externo-eca.svg"
                   alt="link"
                   width={24}
                   height={24}
                 />
-                <span className="text-[#0a0a0a] font-bold text-lg md:text-xl">Síguenos en nuestras redes</span>
+                <span className="text-[#0a0a0a] font-bold text-base md:text-xl">Síguenos en nuestras redes</span>
               </div>
               <p className="text-[#456693] text-sm md:text-base font-light leading-snug ml-9">
                 Consejos contables, novedades
-                <br />
-                tributarias y casos de éxito
+                <br className="hidden sm:block" />
+                <span className="sm:hidden"> </span>tributarias y casos de éxito
               </p>
 
               {/* Social Icons */}
@@ -173,7 +173,7 @@ export const ServiceAction = () => {
                 <button className="bg-white hover:bg-white/90 text-[#0049B2] flex items-center justify-center gap-2 font-medium text-xs md:text-sm px-5 py-3 rounded-full shadow-lg transition-all whitespace-nowrap">
                   CONOCE MÁS AQUÍ
                   <Image
-                    src="/icons/ICON WHATSAPP BLUE.svg"
+                    src="/icons/icono-whatsapp-azul-eca.svg"
                     alt="whatsapp"
                     width={18}
                     height={18}

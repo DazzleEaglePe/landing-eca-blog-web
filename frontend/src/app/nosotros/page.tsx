@@ -146,7 +146,7 @@ export default function NosotrosPage() {
               <div key={idx} className="flex gap-6 items-start">
                 <div className="w-10 h-10 rounded-full bg-[#0049B2] flex items-center justify-center flex-shrink-0 mt-1">
                   <Image
-                    src="/icons/CHECK ICON.svg"
+                    src="/icons/icono-check-azul-eca.svg"
                     alt="check"
                     width={16}
                     height={16}

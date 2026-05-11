@@ -34,7 +34,7 @@ export const Services = () => {
   const [isBeginning, setIsBeginning] = React.useState(true);
 
   return (
-    <section className="relative w-full pb-20 lg:pb-32 pt-4">
+    <section className="relative w-full pb-20 lg:pb-32 pt-0">
       {/* Force swiper wrapper height */}
       <style jsx global>{`
         .services-swiper .swiper-wrapper {
@@ -43,14 +43,13 @@ export const Services = () => {
       `}</style>
 
       <div className="container mx-auto px-4 lg:px-8 relative z-10">
-        {/* Header Section */}
-        <div className="mb-12 lg:mb-16">
-          <p className="text-white text-base md:text-lg mb-4 flex items-center gap-3 font-light tracking-wide">
-            <span className="w-6 h-[1.5px] bg-white/50 inline-block"></span>
+        <div className="mb-8 lg:mb-16">
+          <p className="text-[#456693] lg:text-white text-sm md:text-lg mb-1 lg:mb-4 flex items-center gap-3 font-light tracking-wide">
+            <span className="w-6 h-[1.5px] bg-[#456693]/50 lg:bg-white/50 inline-block"></span>
             Nuestros servicios
           </p>
-          <h2 className="text-4xl md:text-5xl lg:text-6xl text-white font-medium leading-[1.1] max-w-4xl tracking-tight">
-            Conoce nuestros servicios<br/>
+          <h2 className="text-[#0a0a0a] lg:text-white text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-medium leading-[1.1] max-w-4xl tracking-tight">
+            Conoce nuestros servicios<br />
             para ayudar a tu empresa
           </h2>
         </div>
@@ -71,47 +70,47 @@ export const Services = () => {
           <Swiper
             onSwiper={(swiper) => (swiperRef.current = swiper)}
             onSlideChange={(swiper) => setIsBeginning(swiper.isBeginning)}
-            spaceBetween={24}
-            slidesPerView={1.2}
+            spaceBetween={16}
+            slidesPerView={1.15}
             breakpoints={{
-              640: { slidesPerView: 2.2 },
-              1024: { slidesPerView: 3 },
+              640: { slidesPerView: 2.2, spaceBetween: 24 },
+              1024: { slidesPerView: 3, spaceBetween: 24 },
             }}
-            className="services-swiper w-full h-[520px]"
+            className="services-swiper w-full h-[460px] md:h-[520px]"
           >
             {servicesList.map((service, index) => (
               <SwiperSlide key={index} className="!h-full !flex !items-end pb-4">
                 <Link 
                   href={service.href}
-                  className="rounded-3xl flex flex-col justify-between relative overflow-hidden group cursor-pointer border border-white/5 hover:border-white/20 transition-all duration-500 w-full"
-                  style={{ 
-                    backgroundColor: (isBeginning && index === 1) ? '#011F44' : '#000000',
-                    height: (isBeginning && index === 1) ? '480px' : '420px',
-                    alignSelf: 'flex-end'
-                  }}
+                  className={`rounded-3xl flex flex-col justify-between relative overflow-hidden group cursor-pointer border border-white/5 hover:border-white/20 transition-all duration-500 w-full ${
+                    isBeginning && index === 1 
+                      ? 'bg-[#011F44] min-h-[380px] md:h-[480px]' 
+                      : 'bg-[#000000] min-h-[320px] md:h-[420px]'
+                  }`}
+                  style={{ alignSelf: 'flex-end' }}
                 >
                   
                   {/* Top Content */}
-                  <div className="p-8 lg:p-10 z-10 relative">
-                    <div className="flex justify-between items-start mb-6">
-                      <h3 className="text-white text-2xl lg:text-3xl font-regular pr-8 tracking-tight">{service.title}</h3>
-                      <div className="w-10 h-10 flex items-center justify-center -mt-2 -mr-2">
+                  <div className="p-6 md:p-8 lg:p-10 z-10 relative">
+                    <div className="flex justify-between items-start mb-4 md:mb-6">
+                      <h3 className="text-white text-xl md:text-2xl lg:text-3xl font-regular pr-4 md:pr-8 tracking-tight">{service.title}</h3>
+                      <div className="w-8 h-8 md:w-10 md:h-10 flex items-center justify-center -mt-1 -mr-1 md:-mt-2 md:-mr-2 flex-shrink-0">
                         <Image
-                          src="/icons/ARROW ICON.svg"
-                          alt="Arrow"
-                          width={28}
-                          height={28}
-                          className="opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform"
+                          src="/icons/icono-flecha-derecha-eca.svg"
+                          alt="Ver detalle de servicio ECA"
+                          width={24}
+                          height={24}
+                          className="opacity-100 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform w-5 h-5 md:w-7 md:h-7"
                         />
                       </div>
                     </div>
-                    <p className="text-white text-sm lg:text-base leading-relaxed font-light opacity-80">
+                    <p className="text-white text-sm md:text-base leading-relaxed font-light opacity-80">
                       {service.description}
                     </p>
                   </div>
 
                   {/* Bottom Blue Area */}
-                  <div className="w-[85%] h-[160px] bg-[#0049B2] rounded-tr-[3.5rem] mt-auto z-0 relative transition-all duration-500 group-hover:h-[180px] group-hover:w-[90%] ml-0"></div>
+                  <div className="w-[85%] h-[120px] md:h-[160px] bg-[#0049B2] rounded-tr-[3.5rem] mt-auto z-0 relative transition-all duration-500 group-hover:h-[140px] md:group-hover:h-[180px] group-hover:w-[90%] ml-0"></div>
                 </Link>
               </SwiperSlide>
             ))}
