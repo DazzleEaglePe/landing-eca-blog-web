@@ -1,15 +1,16 @@
 import express from 'express';
 import cors from 'cors';
-import dotenv from 'dotenv';
 import mongoose from 'mongoose';
+import { env } from './config/env';
+import { errorHandler } from './middleware/error.middleware';
 
-dotenv.config();
+// Routes
+import contactRoutes from './routes/contact.routes';
 
 const app = express();
-const PORT = process.env.PORT || 4000;
 
 app.use(cors({
-  origin: process.env.CORS_ORIGIN || 'http://localhost:3000',
+  origin: env.CORS_ORIGIN,
   credentials: true
 }));
 
@@ -20,11 +21,16 @@ app.get('/api/health', (req, res) => {
   res.json({ status: 'ok', message: 'Backend is running' });
 });
 
-app.listen(PORT, async () => {
-  console.log(`Server running on port ${PORT}`);
+app.use('/api/contact', contactRoutes);
+
+// Global Error Handler
+app.use(errorHandler);
+
+app.listen(env.PORT, async () => {
+  console.log(`Server running on port ${env.PORT}`);
   try {
-    if (process.env.MONGODB_URI) {
-      await mongoose.connect(process.env.MONGODB_URI);
+    if (env.MONGODB_URI) {
+      await mongoose.connect(env.MONGODB_URI);
       console.log('Connected to MongoDB');
     }
   } catch (error) {
