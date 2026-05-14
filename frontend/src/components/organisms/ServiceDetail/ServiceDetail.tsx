@@ -3,6 +3,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { Contact } from '../Contact';
+import { ServicesTabs } from '../ServicesTabs';
 
 interface ServiceDetailProps {
   title: string;
@@ -10,9 +11,10 @@ interface ServiceDetailProps {
   description: string;
   image: string;
   features: string[];
+  conclusion?: string;
 }
 
-export const ServiceDetail = ({ title, subtitle, description, image, features }: ServiceDetailProps) => {
+export const ServiceDetail = ({ title, subtitle, description, image, features, conclusion }: ServiceDetailProps) => {
   return (
     <main className="pt-32 bg-[#f8faff]">
       {/* Hero Section */}
@@ -31,7 +33,7 @@ export const ServiceDetail = ({ title, subtitle, description, image, features }:
                 {description}
               </p>
               
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5 mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5 mb-8">
                 {features.map((feature, i) => (
                   <div key={i} className="flex items-center gap-4 group">
                     <div className="w-6 h-6 rounded-full bg-[#0049B2] flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110">
@@ -42,10 +44,16 @@ export const ServiceDetail = ({ title, subtitle, description, image, features }:
                         height={12}
                       />
                     </div>
-                    <span className="text-gray-700 font-light text-lg">{feature}</span>
+                    <span className="text-gray-700 font-light text-base md:text-lg">{feature}</span>
                   </div>
                 ))}
               </div>
+
+              {conclusion && (
+                <p className="text-gray-600 font-light italic mb-12 border-l-4 border-primary pl-4">
+                  {conclusion}
+                </p>
+              )}
             </div>
 
             {/* Image/Visual */}
@@ -69,37 +77,8 @@ export const ServiceDetail = ({ title, subtitle, description, image, features }:
         </div>
       </section>
 
-      {/* Process or Details Section - Placeholder for more specific content if needed */}
-      <section className="py-24 bg-white">
-        <div className="container mx-auto px-4 lg:px-8 text-center">
-          <h2 className="text-3xl md:text-4xl text-[#011F44] font-medium mb-16 tracking-tight">
-            ¿Por qué elegir nuestro servicio?
-          </h2>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            <div className="p-8 rounded-[2rem] bg-[#f8faff] hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm mx-auto">
-                 <Image src="/icons/icono-empresa-servicios-eca.svg" alt="" width={24} height={24} />
-              </div>
-              <h3 className="text-xl font-medium text-[#011F44] mb-4">Experiencia Real</h3>
-              <p className="text-gray-500 font-light">Contamos con un equipo de profesionales con amplia trayectoria en el sector.</p>
-            </div>
-            <div className="p-8 rounded-[2rem] bg-[#f8faff] hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm mx-auto">
-                 <Image src="/icons/icono-formulario-contacto-eca.svg" alt="" width={24} height={24} />
-              </div>
-              <h3 className="text-xl font-medium text-[#011F44] mb-4">Soluciones a Medida</h3>
-              <p className="text-gray-500 font-light">Adaptamos nuestros procesos a las necesidades específicas de tu empresa.</p>
-            </div>
-            <div className="p-8 rounded-[2rem] bg-[#f8faff] hover:shadow-md transition-shadow">
-              <div className="w-14 h-14 bg-white rounded-2xl flex items-center justify-center mb-6 shadow-sm mx-auto">
-                 <Image src="/icons/icono-cuadro-decorativo-eca.svg" alt="" width={24} height={24} />
-              </div>
-              <h3 className="text-xl font-medium text-[#011F44] mb-4">Tecnología Avanzada</h3>
-              <p className="text-gray-500 font-light">Utilizamos las mejores herramientas para garantizar eficiencia y precisión.</p>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Services Tabs (Consistent with Home Page graphic line) */}
+      <ServicesTabs />
 
       {/* Reuse Contact Component with the Map grid */}
       <Contact variant="page" />

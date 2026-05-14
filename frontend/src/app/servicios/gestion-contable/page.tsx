@@ -9,18 +9,26 @@ export const metadata: Metadata = {
 export default function GestionContablePage() {
   return (
     <ServiceDetail 
-      title="Gestión Contable Integral"
+      title="Gestión Contable"
       subtitle="Optimización Financiera"
-      description="Transformamos su contabilidad en una herramienta estratégica para la toma de decisiones. Brindamos soporte completo en registros contables, estados financieros y cumplimiento normativo."
+      description="Nos comprometemos a ser más que un proveedor de servicios, a ser un aliado estratégico en el crecimiento y éxito de su negocio. Brindamos soluciones contables personalizadas para empresas grandes, medianas, pequeñas, y emprendimientos."
       image="/images/servicio-gestion-contable-eca.png"
       features={[
-        "Contabilidad externa y asesoría",
-        "Estados financieros mensuales",
-        "Registro de compras y ventas",
-        "Conciliaciones bancarias",
-        "Reportes gerenciales a medida",
-        "Cumplimiento de NIIF"
+        "Provisión de gastos incurridos por el cliente",
+        "Provisión de gastos remitidos por el cliente",
+        "Preparación de Libros Contables",
+        "Preparación de Estados Financieros",
+        "Registro de ingresos al Sistema Contable",
+        "Emisión y Presentación de libros electrónicos SIRE y PLE",
+        "Registro de cobranzas al Sistema Contable",
+        "Reconocimiento inicial y final en cada período de los Activos Fijos",
+        "Revisión de las detracciones, percepciones y retenciones, de aplicar",
+        "Registro de comprobantes de compras y ventas",
+        "Liquidación de IGV",
+        "Registro de pagos en Sistema Contable",
+        "Asesoría contable"
       ]}
+      conclusion="Revisión de la información recibida (comprobantes de pago) para el cumplimiento de los requisitos contables y tributarios."
     />
   );
 }

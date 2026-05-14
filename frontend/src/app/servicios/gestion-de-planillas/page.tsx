@@ -9,17 +9,22 @@ export const metadata: Metadata = {
 export default function GestionPlanillasPage() {
   return (
     <ServiceDetail 
-      title="Gestión Eficiente de Planillas"
-      subtitle="Recursos Humanos"
-      description="Externalice su nómina con total seguridad. Nos encargamos del cálculo preciso de remuneraciones, beneficios sociales y el cumplimiento estricto de la legislación laboral vigente."
+      title="Gestión de Planilla"
+      subtitle="Servicio Contable"
+      description="Nos comprometemos a ser más que un proveedor de servicios, a ser un aliado estratégico en el crecimiento y éxito de su negocio. Simplificamos y automatizamos la gestión de planillas de la empresa, adaptándonos a las necesidades de cualquier negocio, desde pequeñas empresas hasta corporativos."
       image="/images/servicio-gestion-planillas-eca.png"
       features={[
-        "Elaboración de planillas mensuales",
-        "Cálculo de CTS, Gratificaciones y Vacaciones",
-        "Declaración de PLAME (PDT)",
-        "Liquidaciones de beneficios sociales",
-        "Asesoría en legislación laboral",
-        "Trámites ante ESSALUD y AFP"
+        "Cálculo de Planilla de Sueldos (aportaciones, deducciones, CTS, Gratificaciones, Vacaciones)",
+        "Declaración y pago de aportes previsionales (AFP-net)",
+        "Elaboración, declaración y pago mensual del PDT 601 PLAME - planilla electrónica",
+        "Registro mensual de efectivos por Honorarios Electrónicos",
+        "Revisión y archivo digital mensual reportes PDT 601 PLAME (Formatos R01, R02, R03, R04, R12, R14)",
+        "Presentación de contratos laborales al Ministerio de Trabajo para personal extranjero",
+        "Preparación e impresión de boletas de pago a trabajadores",
+        "Registro de trabajadores y sus respectivos familiares en el T-REGISTRO",
+        "Preparación y presentación de impuestos de planillas - ONP, Rta de 5ta, Rta de 4ta (PDT PLAME)",
+        "Liquidación de Beneficios (Gratificación trunca, Vacaciones truncas, CTS, diferenciando los días computables y no computables)",
+        "Registro resumen de planillas en Sistema Contable"
       ]}
     />
   );
