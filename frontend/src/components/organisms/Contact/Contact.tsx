@@ -166,6 +166,34 @@ export const Contact = ({ variant = 'landing' }: ContactProps) => {
                 </div>
               </div>
 
+              {/* Row 1.5: Email & Phone */}
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div className="space-y-2">
+                  <label className="flex items-center gap-2 text-white/90 text-sm font-light ml-2">
+                    <Image src="/icons/icono-formulario-contacto-eca.svg" alt="Correo" width={16} height={16} className="filter brightness-0 invert" />
+                    Correo Electrónico*
+                  </label>
+                  <input 
+                    type="email"
+                    {...register("email", { required: true })}
+                    placeholder="Ingrese su correo electrónico"
+                    className="w-full bg-white rounded-full px-8 py-4 text-[#011F44] placeholder:text-[#011F44]/30 focus:outline-none focus:ring-2 focus:ring-[#0049B2] transition-all"
+                  />
+                </div>
+                <div className="space-y-2">
+                  <label className="flex items-center gap-2 text-white/90 text-sm font-light ml-2">
+                    <Image src="/icons/icono-whatsapp-azul-eca.svg" alt="Teléfono" width={16} height={16} className="filter brightness-0 invert" />
+                    Teléfono Celular*
+                  </label>
+                  <input 
+                    type="tel"
+                    {...register("phone", { required: true, minLength: 7 })}
+                    placeholder="Ingrese su número de celular"
+                    className="w-full bg-white rounded-full px-8 py-4 text-[#011F44] placeholder:text-[#011F44]/30 focus:outline-none focus:ring-2 focus:ring-[#0049B2] transition-all"
+                  />
+                </div>
+              </div>
+
               {/* Row 2: RUC */}
               <div className="space-y-2">
                 <label className="flex items-center gap-2 text-white/90 text-sm font-light ml-2">

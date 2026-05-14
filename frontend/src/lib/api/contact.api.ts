@@ -4,6 +4,8 @@ export interface CreateContactPayload {
   name: string;
   company: string;
   ruc: string;
+  email: string;
+  phone: string;
   comment?: string;
 }
 
