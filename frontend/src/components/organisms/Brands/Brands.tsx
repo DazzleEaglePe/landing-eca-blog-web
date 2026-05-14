@@ -34,7 +34,7 @@ export const Brands = () => {
       <div className="w-full overflow-hidden pause-on-hover">
         {/* Row 1: Scrolling Left */}
         <div className="flex mb-8 md:mb-16">
-          <div className="flex gap-x-12 md:gap-x-32 animate-marquee-left">
+          <div className="flex gap-x-12 md:gap-x-32 pr-12 md:pr-32 w-max animate-marquee-left">
             {[...logos, ...logos].map((logo, index) => (
               <div 
                 key={`row1-${index}`} 
@@ -54,7 +54,7 @@ export const Brands = () => {
 
         {/* Row 2: Scrolling Right */}
         <div className="flex">
-          <div className="flex gap-x-12 md:gap-x-32 animate-marquee-right">
+          <div className="flex gap-x-12 md:gap-x-32 pr-12 md:pr-32 w-max animate-marquee-right">
             {[...logos, ...logos].reverse().map((logo, index) => (
               <div 
                 key={`row2-${index}`} 
