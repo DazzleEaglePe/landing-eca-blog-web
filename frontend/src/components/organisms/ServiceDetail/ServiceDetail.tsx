@@ -10,58 +10,35 @@ interface ServiceDetailProps {
   subtitle: string;
   description: string;
   image: string;
-  features: string[];
-  conclusion?: string;
+  children?: React.ReactNode;
 }
 
-export const ServiceDetail = ({ title, subtitle, description, image, features, conclusion }: ServiceDetailProps) => {
+export const ServiceDetail = ({ title, subtitle, description, image, children }: ServiceDetailProps) => {
   return (
-    <main className="pt-32 bg-[#f8faff]">
+    <main className="pt-32 bg-white">
       {/* Hero Section */}
-      <section className="relative py-20 overflow-hidden">
+      <section className="relative py-20 lg:py-24 overflow-hidden bg-[#f8faff]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             {/* Content */}
             <div className="lg:w-1/2 z-10">
-              <span className="text-primary font-medium tracking-wider uppercase text-sm mb-4 block">
+              <p className="text-[#0049B2] text-base md:text-lg mb-4 flex items-center gap-3 font-light tracking-wide uppercase">
+                <span className="w-6 h-[1.5px] bg-[#0049B2]/50 inline-block"></span>
                 {subtitle}
-              </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-normal text-[#011F44] leading-[1.1] mb-8 tracking-tight">
-                {title}
+              </p>
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-normal text-[#011F44] leading-[1.1] mb-8 tracking-tight">
+                <span className="font-light block">Servicio de</span>
+                <span className="font-medium">{title}</span>
               </h1>
-              <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed mb-10 max-w-xl">
+              <p className="text-xl md:text-2xl text-gray-600 font-light leading-relaxed mb-10 max-w-xl">
                 {description}
               </p>
-              
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-5 mb-8">
-                {features.map((feature, i) => (
-                  <div key={i} className="flex items-center gap-4 group">
-                    <div className="w-6 h-6 rounded-full bg-[#0049B2] flex items-center justify-center flex-shrink-0 transition-transform group-hover:scale-110">
-                      <Image
-                        src="/icons/icono-check-azul-eca.svg"
-                        alt="check"
-                        width={12}
-                        height={12}
-                      />
-                    </div>
-                    <span className="text-gray-700 font-light text-base md:text-lg">{feature}</span>
-                  </div>
-                ))}
-              </div>
-
-              {conclusion && (
-                <p className="text-gray-600 font-light italic mb-12 border-l-4 border-primary pl-4">
-                  {conclusion}
-                </p>
-              )}
             </div>
 
             {/* Image/Visual */}
             <div className="lg:w-1/2 relative">
-              {/* Subtle Ambient Glow */}
               <div className="absolute -inset-4 bg-[#0049B2]/5 blur-3xl rounded-full"></div>
-              
-              <div className="relative rounded-[2.5rem] overflow-hidden border border-gray-100 shadow-xl bg-white p-2">
+              <div className="relative rounded-[2.5rem] overflow-hidden border border-gray-100 shadow-2xl bg-white p-2">
                 <div className="rounded-[2rem] overflow-hidden">
                   <Image 
                     src={image} 
@@ -76,6 +53,9 @@ export const ServiceDetail = ({ title, subtitle, description, image, features, c
           </div>
         </div>
       </section>
+
+      {/* Custom Content Area */}
+      {children}
 
       {/* Services Tabs (Consistent with Home Page graphic line) */}
       <ServicesTabs />
