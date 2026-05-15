@@ -139,11 +139,11 @@ export const ServicesTabs = () => {
           </p>
 
           <h2 className="text-3xl md:text-5xl lg:text-6xl text-[#0a0a0a] font-medium leading-[1.1] tracking-tight">
-            <span className="font-light">Trabajamos en tus</span>
+            <span className="font-light">Conoce nuestros servicios para</span>
             <br />
-            objetivos{" "}
+            ayudar a{" "}
             <span className="inline-block bg-[#0049B2] text-white rounded-full px-6 py-1.5 font-medium leading-tight text-[0.85em]">
-              empresariales.
+              tu empresa.
             </span>
           </h2>
         </div>

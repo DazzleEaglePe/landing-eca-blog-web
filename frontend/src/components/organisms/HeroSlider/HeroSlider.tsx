@@ -5,8 +5,8 @@ import Image from 'next/image';
 import gsap from 'gsap';
 
 const phrases = [
-  { top: "Deja tu contabilidad con", bottom: "Los expertos." },
-  { top: "El primer estudio contable", bottom: "remoto del Perú." },
+  { top: "Deja tu contabilidad", bottom: "en manos expertas." },
+  { top: "Soluciones contables", bottom: "personalizadas." },
   { top: "Innovación y tecnología", bottom: "para tus finanzas." },
   { top: "Tus aliados estratégicos", bottom: "en crecimiento." }
 ];
@@ -76,7 +76,7 @@ export const HeroSlider = () => {
         <div className="mb-8 lg:mb-12">
           <p className="text-white/60 text-xs md:text-sm lg:text-base mb-4 flex items-center gap-3 font-light tracking-wide">
             <span className="w-5 h-[1.5px] bg-white/40 inline-block"></span>
-            Ofrecemos asesoría personalizada y soluciones a medida.
+            Ofrecemos soluciones contables personalizadas.
           </p>
           <div className="min-h-[100px] md:min-h-[140px] lg:min-h-[160px] flex items-start">
             <h1 

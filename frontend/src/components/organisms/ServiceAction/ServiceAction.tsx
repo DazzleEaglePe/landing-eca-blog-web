@@ -7,9 +7,9 @@ import { Button } from '@/components/atoms/Button';
 import { Services } from '../Services';
 
 const features = [
-  { text: "Equipo especializado en", bold: "contabilidad empresarial." },
-  { text: "Tecnología de punta para", bold: "procesos eficientes." },
-  { text: "Comunicación", bold: "constante y reportes claros." },
+  { text: "Cumplimiento de la", bold: "normativa legal y tributaria." },
+  { text: "Servicio personalizado que genera", bold: "valor agregado." },
+  { text: "Trabajamos con", bold: "integridad y profesionalismo." },
 ];
 
 const socialIcons = [
@@ -60,25 +60,21 @@ export const ServiceAction = () => {
           {/* Left Column */}
           <div className="flex-1 max-w-xl">
             {/* Subtitle */}
-            <p className="text-[#456693] text-base md:text-lg mb-4 flex items-center gap-3 font-light tracking-wide">
+            <p className="text-[#456693] text-base md:text-lg mb-4 flex items-center gap-3 font-light tracking-wide uppercase">
               <span className="w-6 h-[1.5px] bg-[#456693]/50 inline-block"></span>
-              ¿Cómo trabajamos?
+              Sobre nosotros
             </p>
 
             {/* Heading */}
             <h2 className="text-3xl sm:text-4xl lg:text-5xl xl:text-6xl text-[#0a0a0a] leading-[1.1] mb-4 md:mb-6">
-              <span className="font-light">Conoce nuestro</span>
+              <span className="font-light">Trabajamos en tus</span>
               <br />
-              <span className="font-medium">servicio en acción.</span>
+              <span className="font-medium text-[#0049B2]">objetivos empresariales.</span>
             </h2>
 
             {/* Subheading */}
-            <p className="text-[rgba(0,0,0,0.57)] text-lg sm:text-xl md:text-2xl lg:text-3xl font-light leading-snug mb-6">
-              ¿Por qué las empresas
-              <br className="hidden sm:block" />
-              <span className="sm:hidden"> </span>confían en nuestra gestión
-              <br className="hidden sm:block" />
-              <span className="sm:hidden"> </span>contable?
+            <p className="text-[rgba(0,0,0,0.57)] text-lg sm:text-xl md:text-xl font-light leading-relaxed mb-8">
+              Somos ECA, un equipo de profesionales dedicados a brindar soluciones contables y financieras adaptadas a las necesidades de su negocio.
             </p>
 
             {/* Feature List */}
