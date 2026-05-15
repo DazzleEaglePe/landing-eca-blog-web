@@ -15,9 +15,9 @@ interface ServiceDetailProps {
 
 export const ServiceDetail = ({ title, subtitle, description, image, children }: ServiceDetailProps) => {
   return (
-    <main className="pt-32 bg-white">
+    <main className="pt-32 bg-[#f8faff]">
       {/* Hero Section */}
-      <section className="relative py-20 lg:py-24 overflow-hidden bg-[#f8faff]">
+      <section className="relative pb-20 lg:pb-24 overflow-hidden bg-[#f8faff]">
         <div className="container mx-auto px-4 lg:px-8">
           <div className="flex flex-col lg:flex-row gap-16 items-center">
             {/* Content */}
