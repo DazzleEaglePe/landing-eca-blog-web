@@ -1,7 +1,7 @@
 import { MetadataRoute } from 'next'
  
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://ecasoluciones.pe'
+  const baseUrl = 'https://estudiocontablealvarez.com'
   
   return [
     {
