@@ -3,8 +3,9 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Gestión Contable",
-  description: "Optimice sus finanzas con nuestra gestión contable experta en Perú. Reportes claros, cumplimiento tributario ante SUNAT y asesoría estratégica para Mypes.",
+  title: "Gestión Contable Estratégica para Mypes y Empresas en Lima",
+  description: "Servicio de gestión contable integral: estados financieros, facturación electrónica, control de inventarios y cumplimiento tributario ante SUNAT. Reportes claros y asesoría estratégica para Mypes en Lima, Perú.",
+  alternates: { canonical: "/servicios/gestion-contable" },
 };
 
 export default function GestionContablePage() {

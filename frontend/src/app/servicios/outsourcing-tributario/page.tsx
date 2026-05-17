@@ -3,8 +3,9 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Outsourcing Tributario",
-  description: "Nos encargamos de la gestión tributaria integral, garantizando el cumplimiento normativo y optimizando la carga fiscal de su empresa.",
+  title: "Outsourcing Tributario · Asesoría Fiscal y Declaraciones SUNAT",
+  description: "Outsourcing tributario integral: liquidación de IGV e Impuesto a la Renta, declaraciones juradas anuales, devolución de Drawback, saldos a favor del exportador y asistencia en fiscalizaciones SUNAT.",
+  alternates: { canonical: "/servicios/outsourcing-tributario" },
 };
 
 export default function OutsourcingTributarioPage() {

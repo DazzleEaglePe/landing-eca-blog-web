@@ -3,8 +3,9 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Gestión de Planilla",
-  description: "Administración eficiente de recursos humanos y nóminas en Perú. Garantizamos el cálculo preciso de remuneraciones, beneficios sociales y cumplimiento laboral.",
+  title: "Gestión de Planillas, Nóminas y Cumplimiento Laboral SUNAFIL",
+  description: "Administración eficiente de planillas y nóminas: liquidación de CTS, gratificaciones, vacaciones, cálculo de quinta categoría, aportes AFP y ESSALUD. Soporte ante SUNAFIL en Lima, Perú.",
+  alternates: { canonical: "/servicios/gestion-de-planillas" },
 };
 
 export default function GestionPlanillasPage() {

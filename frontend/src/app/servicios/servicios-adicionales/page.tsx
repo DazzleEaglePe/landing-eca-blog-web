@@ -3,8 +3,9 @@ import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
-  title: "Servicios Adicionales",
-  description: "Consultoría integral para el crecimiento de su negocio en Perú. Especialistas en constitución de empresas, trámites administrativos y soporte 360°.",
+  title: "Constitución de Empresas, Drawback y Soporte Legal en Perú",
+  description: "Servicios adicionales: constitución de empresas (SAC, EIRL, SRL), trámites SUNARP, devolución de Drawback, soporte administrativo y asesoría legal corporativa. Tu aliado integral en Lima, Perú.",
+  alternates: { canonical: "/servicios/servicios-adicionales" },
 };
 
 export default function ServiciosAdicionalesPage() {
