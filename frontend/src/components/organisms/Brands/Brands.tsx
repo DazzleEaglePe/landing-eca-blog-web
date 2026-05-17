@@ -35,7 +35,7 @@ export const Brands = () => {
         {/* Row 1: Scrolling Left */}
         <div className="flex mb-8 md:mb-16">
           <div className="flex gap-x-12 md:gap-x-32 pr-12 md:pr-32 w-max animate-marquee-left">
-            {[...logos, ...logos].map((logo, index) => (
+            {[...logos, ...logos, ...logos].map((logo, index) => (
               <div 
                 key={`row1-${index}`} 
                 className="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100 flex-shrink-0"
@@ -55,7 +55,7 @@ export const Brands = () => {
         {/* Row 2: Scrolling Right */}
         <div className="flex">
           <div className="flex gap-x-12 md:gap-x-32 pr-12 md:pr-32 w-max animate-marquee-right">
-            {[...logos, ...logos].reverse().map((logo, index) => (
+            {[...logos, ...logos, ...logos].reverse().map((logo, index) => (
               <div 
                 key={`row2-${index}`} 
                 className="flex items-center justify-center grayscale hover:grayscale-0 transition-all duration-500 opacity-60 hover:opacity-100 flex-shrink-0"
