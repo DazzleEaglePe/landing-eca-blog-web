@@ -1,13 +1,5 @@
 import { ServiceDetail } from "@/components/organisms/ServiceDetail";
 import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Gestión de Planillas",
-  description: "Administración eficiente de recursos humanos y nóminas en Perú. Garantizamos el cálculo preciso de remuneraciones, beneficios sociales y cumplimiento laboral.",
-};
-
-import { ServiceDetail } from "@/components/organisms/ServiceDetail";
-import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {

@@ -1,13 +1,5 @@
 import { ServiceDetail } from "@/components/organisms/ServiceDetail";
 import { Metadata } from "next";
-
-export const metadata: Metadata = {
-  title: "Gestión Contable",
-  description: "Optimice sus finanzas con nuestra gestión contable experta en Perú. Reportes claros, cumplimiento tributario ante SUNAT y asesoría estratégica para Mypes.",
-};
-
-import { ServiceDetail } from "@/components/organisms/ServiceDetail";
-import { Metadata } from "next";
 import Image from "next/image";
 
 export const metadata: Metadata = {
