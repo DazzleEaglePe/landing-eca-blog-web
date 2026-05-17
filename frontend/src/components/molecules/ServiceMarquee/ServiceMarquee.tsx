@@ -21,7 +21,7 @@ export const ServiceMarquee = () => {
       <div className="flex animate-marquee whitespace-nowrap items-center">
         {items.map((service, index) => (
           <div key={index} className="flex items-center mx-6 lg:mx-10">
-            <span className="text-[#4C95FF] text-lg md:text-2xl lg:text-3xl font-normal tracking-wide">
+            <span className="text-white/90 text-lg md:text-2xl lg:text-3xl font-normal tracking-wide">
               {service}
             </span>
             <div className="ml-6 lg:ml-10 flex-shrink-0">

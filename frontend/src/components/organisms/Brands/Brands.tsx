@@ -26,7 +26,7 @@ export const Brands = () => {
         <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl text-[#0a0a0a] font-medium leading-[1.1] max-w-4xl mx-auto tracking-tight mb-4">
           Marcas con las que crecemos
         </h2>
-        <p className="text-[#808080] text-lg md:text-xl lg:text-2xl font-light max-w-3xl mx-auto">
+        <p className="text-[#666666] text-lg md:text-xl lg:text-2xl font-light max-w-3xl mx-auto">
           Más que clientes, son aliados que nos permiten ser parte de su historia
         </p>
       </div>

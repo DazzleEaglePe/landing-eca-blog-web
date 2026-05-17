@@ -85,7 +85,7 @@ export const HeroSlider = () => {
             >
               {phrases[phraseIndex].top}
               <br />
-              <span className="text-[#0066FF]">{phrases[phraseIndex].bottom}</span>
+              <span className="text-[#93C5FD]">{phrases[phraseIndex].bottom}</span>
             </h1>
           </div>
 
@@ -142,7 +142,7 @@ export const HeroSlider = () => {
                 <p className="text-[#7EB3FF] text-3xl sm:text-4xl lg:text-5xl font-normal">
                   <span ref={count1Ref}>0</span>+
                 </p>
-                <p className="text-[#7EB3FF]/70 text-xs sm:text-sm mt-1 font-light">Proyectos completados</p>
+                <p className="text-white/80 text-xs sm:text-sm mt-1 font-light">Proyectos completados</p>
               </div>
               {/* Divider for mobile */}
               <div className="w-[1px] h-12 bg-white/20 lg:hidden"></div>
@@ -150,7 +150,7 @@ export const HeroSlider = () => {
                 <p className="text-[#7EB3FF] text-3xl sm:text-4xl lg:text-5xl font-normal">
                   <span ref={count2Ref}>0</span>+
                 </p>
-                <p className="text-[#7EB3FF]/70 text-xs sm:text-sm mt-1 font-light">Años de experiencia</p>
+                <p className="text-white/80 text-xs sm:text-sm mt-1 font-light">Años de experiencia</p>
               </div>
               {/* Divider for mobile */}
               <div className="w-[1px] h-12 bg-white/20 hidden sm:block lg:hidden"></div>
@@ -158,7 +158,7 @@ export const HeroSlider = () => {
                 <p className="text-[#7EB3FF] text-3xl sm:text-4xl lg:text-5xl font-normal">
                   <span ref={count3Ref}>0</span>
                 </p>
-                <p className="text-[#7EB3FF]/70 text-xs sm:text-sm mt-1 font-light">Clientes satisfechos</p>
+                <p className="text-white/80 text-xs sm:text-sm mt-1 font-light">Clientes satisfechos</p>
               </div>
             </div>
             {/* Mobile separate row for 3rd stat if needed, but handled with hidden/block to avoid crowding */}

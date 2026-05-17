@@ -209,12 +209,14 @@ export const Contact = ({ variant = 'landing' }: ContactProps) => {
 
               {/* Row 3: Comment */}
               <div className="space-y-2">
-                <label className="flex items-center gap-2 text-white/90 text-sm font-light ml-2">
+                <label htmlFor="contact-comment" className="flex items-center gap-2 text-white/90 text-sm font-light ml-2">
                   <Image src="/icons/icono-formulario-mensaje-eca.svg" alt="Mensaje" width={16} height={16} className="filter brightness-0 invert" />
                   Comentario (opcional)*
                 </label>
                 <textarea 
                   {...register("comment")}
+                  id="contact-comment"
+                  aria-label="Comentario"
                   placeholder=""
                   rows={4}
                   className="w-full bg-white rounded-[2rem] px-8 py-6 text-[#011F44] placeholder:text-[#011F44]/30 focus:outline-none focus:ring-2 focus:ring-[#0049B2] transition-all resize-none"

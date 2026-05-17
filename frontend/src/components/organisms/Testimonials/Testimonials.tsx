@@ -169,7 +169,7 @@ export const Testimonials = () => {
                       </div>
                       <div className="flex flex-col">
                         <span className="text-[#0a0a0a] font-medium text-lg">{item.name}</span>
-                        <span className="text-[#0a0a0a]/50 text-xs tracking-[0.1em] font-normal ">{item.role}</span>
+                        <span className="text-[#0a0a0a]/65 text-xs tracking-[0.1em] font-normal ">{item.role}</span>
                       </div>
                     </div>
                   </div>
