@@ -50,8 +50,8 @@ const madeTommy = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://estudiocontablealvarez.com'),
   title: {
-    default: "Estudio Contable Álvarez | Consultoría Contable, Tributaria y Laboral en Lima, Perú",
-    template: "%s | Estudio Contable Álvarez – ECA Soluciones"
+    default: "ECA Estudio Contable Álvarez | Consultoría Contable, Tributaria y Laboral en Lima, Perú",
+    template: "%s | ECA Estudio Contable Álvarez"
   },
   description: "Estudio Contable Álvarez (ECA Soluciones Empresariales SAC) ofrece servicios de gestión contable, outsourcing tributario, administración de planillas y constitución de empresas en Lima, Perú. +15 años de experiencia ante SUNAT, SUNAFIL y SUNARP.",
   keywords: [

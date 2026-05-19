@@ -26,7 +26,7 @@ export const ecaLocalBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "AccountingService",
   "name": "Estudio Contable Álvarez – ECA Soluciones Empresariales SAC",
-  "alternateName": "ECA Soluciones",
+  "alternateName": ["ECA Estudio Contable", "ECA Soluciones", "ECA Estudio Contable Álvarez"],
   "url": "https://estudiocontablealvarez.com",
   "logo": "https://estudiocontablealvarez.com/images/logo-eca-asesores-blanco.svg",
   "description": "Estudio contable con +15 años de experiencia en gestión contable, outsourcing tributario, administración de planillas y constitución de empresas en Lima, Perú.",

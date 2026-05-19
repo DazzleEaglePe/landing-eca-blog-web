@@ -9,9 +9,9 @@ import { Contact } from "@/components/organisms/Contact";
 import { JsonLd, ecaLocalBusinessSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "Estudio Contable Álvarez | Gestión Contable, Tributaria y Laboral en Lima",
+  title: "ECA Estudio Contable Álvarez | Asesoría Contable, Tributaria y Laboral en Lima",
   description:
-    "Deja tu contabilidad en manos expertas. Estudio Contable Álvarez (ECA) ofrece gestión contable, outsourcing tributario, planillas y constitución de empresas para Mypes y corporativos en Lima, Perú.",
+    "Deja tu contabilidad en manos de expertos. ECA Estudio Contable Álvarez ofrece outsourcing tributario, gestión de planillas, constitución de empresas y asesoría contable para Mypes en Lima, Perú.",
   alternates: {
     canonical: "/",
   },
