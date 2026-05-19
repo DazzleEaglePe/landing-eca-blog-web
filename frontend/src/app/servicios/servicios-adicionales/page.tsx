@@ -1,6 +1,5 @@
 import { ServiceDetail } from "@/components/organisms/ServiceDetail";
 import { Metadata } from "next";
-import Image from "next/image";
 
 export const metadata: Metadata = {
   title: "Constitución de Empresas, Drawback y Soporte Legal en Perú",
@@ -12,107 +11,91 @@ export default function ServiciosAdicionalesPage() {
   return (
     <ServiceDetail 
       title="Servicios Adicionales"
-      subtitle="Servicio Contable"
+      subtitle="Servicios Corporativos"
       description="Nos comprometemos a ser más que un proveedor de servicios, a ser un aliado estratégico en el crecimiento y éxito de su negocio. Brindamos un enfoque integral para la creación, gestión y optimización de negocios."
       image="/images/servicios-asesoria-negocios-eca.png"
     >
-      {/* Sección Informativa Rica */}
-      <section className="py-24 bg-white">
+      {/* ═══ Services Included ═══ */}
+      <section className="py-20 lg:py-28 bg-white">
         <div className="container mx-auto px-4 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-20 items-center mb-32">
-            <div>
-              <h2 className="text-3xl md:text-5xl lg:text-6xl text-[#011F44] leading-[1.1] mb-8">
-                <span className="font-light block">Soporte integral y</span>
+          <div className="flex flex-col lg:flex-row gap-16 lg:gap-24 items-start">
+            {/* Left - Heading */}
+            <div className="lg:w-5/12 lg:sticky lg:top-40">
+              <p className="text-[#0a0a0a] text-sm md:text-base mb-4 flex items-center gap-3 font-normal tracking-wide">
+                <span className="w-6 h-[1.5px] bg-[#0049B2] inline-block" />
+                Lo que incluye
+              </p>
+              <h2 className="text-3xl md:text-5xl text-[#011F44] leading-[1.08] tracking-tight mb-6">
+                <span className="font-light">Soporte integral y</span><br />
                 <span className="font-medium text-[#0049B2]">servicios personalizados.</span>
               </h2>
-              <p className="text-lg md:text-xl text-gray-600 font-light leading-relaxed mb-10">
+              <p className="text-[rgba(0,0,0,0.57)] text-lg font-light leading-relaxed">
                 Entendemos que cada negocio tiene necesidades únicas. Ofrecemos un portafolio de servicios adicionales diseñados para acompañarlo en cada etapa de su crecimiento empresarial.
               </p>
-              <div className="space-y-6">
+            </div>
+
+            {/* Right - Service Items */}
+            <div className="lg:w-7/12">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 {[
-                  { title: "Constitución de Empresas", desc: "Asesoría completa para formalizar su negocio." },
-                  { title: "Trámites Gubernamentales", desc: "Gestiones ágiles ante SUNAT y Registros Públicos." },
-                  { title: "Planificación Tributaria", desc: "Soporte experto para optimizar sus obligaciones." },
-                  { title: "Soporte Legal y Contractual", desc: "Asesoría en la elaboración de contratos y acuerdos." },
-                  { title: "Acompañamiento Permanente", desc: "Consultoría continua para la toma de decisiones." }
+                  { title: "Constitución de Empresas", desc: "Asesoría completa para formalizar su negocio ante SUNARP y notarías." },
+                  { title: "Trámites Gubernamentales", desc: "Gestiones ágiles ante SUNAT, SUNARP y Registros Públicos." },
+                  { title: "Planificación Tributaria", desc: "Soporte experto para optimizar sus obligaciones fiscales." },
+                  { title: "Soporte Legal y Contractual", desc: "Asesoría en la elaboración y revisión de contratos comerciales." },
+                  { title: "Devolución de Drawback", desc: "Restitución de derechos arancelarios para importadores y exportadores." },
+                  { title: "Acompañamiento Permanente", desc: "Consultoría continua para la toma de decisiones estratégicas." },
                 ].map((item, i) => (
-                  <div key={i} className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-[#0049B2] flex items-center justify-center flex-shrink-0 mt-1 shadow-md shadow-[#0049B2]/20">
-                       <Image src="/icons/icono-check-azul-eca.svg" alt="" width={14} height={14} className="invert brightness-0" />
+                  <div key={i} className="group bg-white border border-gray-100 rounded-2xl p-6 transition-all duration-300 hover:shadow-lg hover:shadow-[#0049B2]/5 hover:-translate-y-1 hover:border-[#0049B2]/20">
+                    <div className="w-10 h-10 rounded-xl bg-[#0049B2]/10 text-[#0049B2] flex items-center justify-center mb-4 group-hover:bg-[#0049B2] group-hover:text-white transition-all duration-300">
+                      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                        <polyline points="20 6 9 17 4 12"/>
+                      </svg>
                     </div>
-                    <div>
-                      <h4 className="text-[#011F44] font-medium text-lg">{item.title}</h4>
-                      <p className="text-gray-600 font-light mt-1">{item.desc}</p>
-                    </div>
+                    <h3 className="text-[#011F44] font-medium text-base mb-1">{item.title}</h3>
+                    <p className="text-[rgba(0,0,0,0.5)] text-sm font-light leading-relaxed">{item.desc}</p>
                   </div>
                 ))}
-              </div>
-            </div>
-            <div className="relative">
-              <div className="absolute -inset-4 bg-[#0049B2]/5 blur-3xl rounded-full"></div>
-              <div className="relative rounded-[2.5rem] overflow-hidden shadow-2xl border border-gray-100 bg-white p-2">
-                <div className="rounded-[2rem] overflow-hidden">
-                  <Image 
-                    src="/images/servicios-asesoria-negocios-eca.png" 
-                    alt="Servicios adicionales y consultoría" 
-                    width={600} 
-                    height={500} 
-                    className="w-full h-auto object-cover hover:scale-105 transition-transform duration-700"
-                  />
-                </div>
               </div>
             </div>
           </div>
+        </div>
+      </section>
 
-          {/* Sección de Valor Diferencial (Bento Box Style) */}
-          <div className="relative bg-[#f8faff] rounded-[3rem] p-8 md:p-16 lg:p-20 overflow-hidden border border-[#0049B2]/5">
-            {/* Decoraciones de fondo */}
-            <div className="absolute top-0 right-0 w-[30rem] h-[30rem] bg-[#0049B2]/5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/3"></div>
-            <div className="absolute bottom-0 left-0 w-[20rem] h-[20rem] bg-[#0049B2]/5 rounded-full blur-3xl translate-y-1/3 -translate-x-1/3"></div>
+      {/* ═══ Why ECA - Dark Panel ═══ */}
+      <section className="bg-[#011F44] py-20 lg:py-28 relative overflow-hidden">
+        <div className="absolute -top-40 -right-40 w-[400px] h-[400px] bg-[#0049B2]/15 rounded-full blur-[100px] pointer-events-none" />
+        <div className="absolute -bottom-40 -left-40 w-[300px] h-[300px] bg-[#0049B2]/10 rounded-full blur-[100px] pointer-events-none" />
+        
+        <div className="container mx-auto px-4 lg:px-8 relative z-10">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <p className="text-white/50 text-sm mb-4 font-semibold tracking-widest uppercase flex items-center justify-center gap-3">
+              <span className="w-8 h-[2px] bg-white/30 inline-block" />
+              Enfoque 360°
+              <span className="w-8 h-[2px] bg-white/30 inline-block" />
+            </p>
+            <h2 className="text-3xl md:text-5xl text-white leading-[1.08] tracking-tight">
+              <span className="font-light">Soluciones que impulsan</span>{" "}
+              <span className="font-medium">el crecimiento de su negocio.</span>
+            </h2>
+          </div>
 
-            <div className="relative z-10 max-w-4xl mx-auto">
-              <div className="text-center mb-16">
-                <span className="text-[#0049B2] font-medium tracking-wider uppercase text-sm mb-4 block">
-                  Enfoque 360°
-                </span>
-                <h3 className="text-3xl md:text-4xl lg:text-5xl font-medium text-[#011F44] mb-6">
-                  Soluciones que impulsan <br className="hidden md:block" /> el crecimiento de <span className="text-[#0049B2]">su negocio</span>
-                </h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+            {[
+              { title: "Formalización Ágil", desc: "Le guiamos paso a paso en la constitución de su empresa, eligiendo la estructura societaria más conveniente (SAC, EIRL, etc).", icon: "M22 11.08V12a10 10 0 1 1-5.93-9.14M22 4L12 14.01l-3-3" },
+              { title: "Representación Especializada", desc: "Actuamos como sus representantes ante entidades públicas, ahorrándole tiempo en trámites burocráticos.", icon: "M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2M9 11a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM23 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75" },
+              { title: "Seguridad Jurídica", desc: "Redactamos y revisamos sus contratos comerciales para blindar legalmente sus operaciones.", icon: "M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" },
+              { title: "Visión a Futuro", desc: "Nuestra consultoría continua le permite anticiparse a escenarios económicos y tributarios para tomar mejores decisiones.", icon: "M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8zM12 9a3 3 0 1 0 0 6 3 3 0 0 0 0-6z" },
+            ].map((item, i) => (
+              <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-3xl p-10 hover:bg-white/10 transition-all duration-500 group">
+                <div className="w-14 h-14 rounded-2xl bg-white/10 flex items-center justify-center mb-6 group-hover:bg-[#0049B2]/30 transition-colors duration-500">
+                  <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="white" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d={item.icon}/>
+                  </svg>
+                </div>
+                <h3 className="text-xl md:text-2xl text-white font-medium mb-3">{item.title}</h3>
+                <p className="text-white/55 text-base font-light leading-relaxed">{item.desc}</p>
               </div>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                {[
-                  {
-                    title: "Formalización Ágil",
-                    desc: "Le guiamos paso a paso en la constitución de su empresa, eligiendo la estructura societaria más conveniente (SAC, EIRL, etc).",
-                    icon: "/icons/icono-check-azul-eca.svg"
-                  },
-                  {
-                    title: "Representación Especializada",
-                    desc: "Actuamos como sus representantes ante entidades públicas, ahorrándole tiempo en trámites burocráticos.",
-                    icon: "/icons/icono-check-azul-eca.svg"
-                  },
-                  {
-                    title: "Seguridad Jurídica",
-                    desc: "Redactamos y revisamos sus contratos comerciales para blindar legalmente sus operaciones.",
-                    icon: "/icons/icono-check-azul-eca.svg"
-                  },
-                  {
-                    title: "Visión a Futuro",
-                    desc: "Nuestra consultoría continua le permite anticiparse a escenarios económicos y tributarios para tomar mejores decisiones.",
-                    icon: "/icons/icono-check-azul-eca.svg"
-                  }
-                ].map((benefit, i) => (
-                  <div key={i} className="bg-white/80 backdrop-blur-md rounded-[2rem] p-8 shadow-[0_8px_30px_rgb(0,0,0,0.04)] border border-white hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
-                    <div className="w-12 h-12 rounded-2xl bg-[#f8faff] flex items-center justify-center mb-6 text-[#0049B2]">
-                      <Image src={benefit.icon} alt="" width={24} height={24} className="opacity-80" />
-                    </div>
-                    <h4 className="text-xl font-medium text-[#011F44] mb-3">{benefit.title}</h4>
-                    <p className="text-gray-600 font-light leading-relaxed">{benefit.desc}</p>
-                  </div>
-                ))}
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </section>
