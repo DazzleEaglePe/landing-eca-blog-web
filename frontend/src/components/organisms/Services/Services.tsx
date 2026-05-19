@@ -61,6 +61,7 @@ export const Services = () => {
             onClick={() => swiperRef.current?.slidePrev()}
             className={`absolute -left-4 lg:-left-12 top-1/2 -translate-y-1/2 z-20 text-white p-2 hover:opacity-70 transition-opacity hidden md:block ${isBeginning ? 'opacity-20 cursor-not-allowed' : 'opacity-100'}`}
             disabled={isBeginning}
+            aria-label="Servicios anteriores"
           >
             <svg width="24" height="40" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg" className="rotate-180">
               <path d="M2 2L20 20L2 38" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
@@ -120,6 +121,7 @@ export const Services = () => {
           <button 
             onClick={() => swiperRef.current?.slideNext()}
             className="absolute -right-4 lg:-right-12 top-1/2 -translate-y-1/2 z-20 text-white p-2 hover:opacity-70 transition-opacity hidden md:block"
+            aria-label="Siguientes servicios"
           >
             <svg width="24" height="40" viewBox="0 0 24 40" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M2 2L20 20L2 38" stroke="white" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
