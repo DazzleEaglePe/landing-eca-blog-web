@@ -25,7 +25,7 @@ export const JsonLd = ({ data }: JsonLdProps) => {
 export const ecaLocalBusinessSchema = {
   "@context": "https://schema.org",
   "@type": "AccountingService",
-  "name": "ECA SOLUCIONES EMPRESARIALES S.A.C.",
+  "name": "ECA Soluciones Empresariales S.A.C.",
   "alternateName": ["Estudio Contable Álvarez", "ECA Soluciones", "ECA Estudio Contable"],
   "url": "https://estudiocontablealvarez.com",
   "logo": "https://estudiocontablealvarez.com/images/logo-eca-asesores-blanco.svg",

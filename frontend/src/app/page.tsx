@@ -9,9 +9,9 @@ import { Contact } from "@/components/organisms/Contact";
 import { JsonLd, ecaLocalBusinessSchema } from "@/components/seo/JsonLd";
 
 export const metadata: Metadata = {
-  title: "ECA SOLUCIONES EMPRESARIALES S.A.C. | Asesoría y Consultoría Contable, Tributaria y Laboral",
+  title: "ECA Soluciones Empresariales S.A.C. | Asesoría y Consultoría Contable, Tributaria y Laboral",
   description:
-    "Deja tu contabilidad en manos de expertos. ECA SOLUCIONES EMPRESARIALES S.A.C. ofrece servicios de contabilidad, outsourcing tributario, gestión de planillas y constitución de empresas para Mypes en Lima, Perú.",
+    "Deja tu contabilidad en manos de expertos. ECA Soluciones Empresariales S.A.C. ofrece servicios de contabilidad, outsourcing tributario, gestión de planillas y constitución de empresas para Mypes en Lima, Perú.",
   alternates: {
     canonical: "/",
   },

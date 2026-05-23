@@ -3,8 +3,8 @@ import Link from 'next/link';
 import { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: "Blog & Actualidad Empresarial | ECA SOLUCIONES EMPRESARIALES S.A.C.",
-  description: "Portal de actualidad empresarial. Mantente al día con las últimas normativas tributarias, laborales y contables de la mano de ECA SOLUCIONES EMPRESARIALES S.A.C.",
+  title: "Blog & Actualidad Empresarial | ECA Soluciones Empresariales S.A.C.",
+  description: "Portal de actualidad empresarial. Mantente al día con las últimas normativas tributarias, laborales y contables de la mano de ECA Soluciones Empresariales S.A.C.",
 };
 
 const upcomingCategories = [
