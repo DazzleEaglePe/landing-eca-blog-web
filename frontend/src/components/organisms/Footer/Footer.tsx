@@ -111,7 +111,7 @@ export const Footer = () => {
         {/* Bottom Bar: Copyright Left, Socials Right */}
         <div className="flex flex-col md:flex-row items-center justify-between gap-6 py-4">
           <p className="text-white/60 text-sm font-light text-center md:text-left">
-            © {new Date().getFullYear()} ECA Soluciones Empresariales SAC. Todos los derechos reservados.
+            © {new Date().getFullYear()} ECA SOLUCIONES EMPRESARIALES S.A.C. Todos los derechos reservados.
           </p>
 
           <div className="flex items-center gap-4">

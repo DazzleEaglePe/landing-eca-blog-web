@@ -52,11 +52,13 @@ const madeTommy = localFont({
 export const metadata: Metadata = {
   metadataBase: new URL('https://estudiocontablealvarez.com'),
   title: {
-    default: "ECA Estudio Contable Álvarez | Consultoría Contable, Tributaria y Laboral en Lima, Perú",
-    template: "%s | ECA Estudio Contable Álvarez"
+    default: "ECA SOLUCIONES EMPRESARIALES S.A.C. | Estudio Contable, Tributario y Laboral en Lima",
+    template: "%s | ECA SOLUCIONES EMPRESARIALES S.A.C."
   },
-  description: "Estudio Contable Álvarez (ECA Soluciones Empresariales SAC) ofrece servicios de gestión contable, outsourcing tributario, administración de planillas y constitución de empresas en Lima, Perú. +15 años de experiencia ante SUNAT, SUNAFIL y SUNARP.",
+  description: "ECA SOLUCIONES EMPRESARIALES S.A.C. ofrece servicios de gestión contable, outsourcing tributario, administración de planillas y constitución de empresas en Lima, Perú. +15 años de experiencia ante SUNAT, SUNAFIL y SUNARP.",
   keywords: [
+    "empresa contable",
+    "servicios contabilidad",
     "estudio contable lima",
     "contabilidad para empresas perú",
     "outsourcing tributario SUNAT",
@@ -67,12 +69,12 @@ export const metadata: Metadata = {
     "devolución de drawback",
     "liquidación de beneficios sociales",
     "consultoría contable ate lima",
-    "ECA Soluciones Empresariales",
-    "estudio contable álvarez"
+    "ECA SOLUCIONES EMPRESARIALES S.A.C.",
+    "ECA Soluciones Empresariales"
   ],
-  authors: [{ name: "ECA Soluciones Empresariales SAC" }],
-  creator: "Estudio Contable Álvarez",
-  publisher: "ECA Soluciones Empresariales SAC",
+  authors: [{ name: "ECA SOLUCIONES EMPRESARIALES S.A.C." }],
+  creator: "ECA SOLUCIONES EMPRESARIALES S.A.C.",
+  publisher: "ECA SOLUCIONES EMPRESARIALES S.A.C.",
   formatDetection: {
     email: false,
     address: false,
@@ -82,16 +84,16 @@ export const metadata: Metadata = {
     canonical: '/',
   },
   openGraph: {
-    title: "Estudio Contable Álvarez | Tu Aliado Estratégico en Lima, Perú",
+    title: "ECA SOLUCIONES EMPRESARIALES S.A.C. | Tu Aliado Estratégico en Lima, Perú",
     description: "Soluciones contables, tributarias y laborales integrales para Mypes y empresas. Gestión eficiente, personalizada y con cumplimiento normativo garantizado.",
     url: "https://estudiocontablealvarez.com",
-    siteName: "Estudio Contable Álvarez – ECA Soluciones",
+    siteName: "ECA SOLUCIONES EMPRESARIALES S.A.C.",
     locale: "es_PE",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Estudio Contable Álvarez | Consultoría Contable y Tributaria en Perú",
+    title: "ECA SOLUCIONES EMPRESARIALES S.A.C. | Consultoría Contable y Tributaria en Perú",
     description: "Expertos en gestión contable, planillas y outsourcing tributario. Impulsamos el crecimiento de tu negocio en Lima y todo el Perú.",
   },
   robots: {
