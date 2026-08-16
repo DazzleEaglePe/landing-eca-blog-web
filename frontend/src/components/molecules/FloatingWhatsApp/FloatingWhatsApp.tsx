@@ -1,5 +1,8 @@
+"use client";
+
 import React from 'react';
 import Image from 'next/image';
+import { trackWhatsAppClick } from '@/lib/gtag';
 
 export const FloatingWhatsApp = () => {
   // Número de WhatsApp (puedes cambiarlo aquí)
@@ -12,6 +15,7 @@ export const FloatingWhatsApp = () => {
       href={whatsappUrl}
       target="_blank"
       rel="noopener noreferrer"
+      onClick={() => trackWhatsAppClick('flotante')}
       className="fixed bottom-6 right-6 lg:bottom-10 lg:right-10 z-[90] flex items-center justify-center w-14 h-14 lg:w-16 lg:h-16 bg-[#25D366] hover:bg-[#1ebd5b] rounded-full shadow-lg transition-transform hover:-translate-y-1 group"
       aria-label="Contactar por WhatsApp"
     >

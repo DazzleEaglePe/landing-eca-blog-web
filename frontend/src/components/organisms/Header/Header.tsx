@@ -5,6 +5,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/atoms/Button';
 import { ChevronDown, X, Menu } from 'lucide-react';
+import { trackWhatsAppClick } from '@/lib/gtag';
 
 export const Header = () => {
   const [isServicesOpen, setIsServicesOpen] = useState(false);
@@ -107,7 +108,12 @@ export const Header = () => {
 
         {/* Action Buttons (Desktop Only) */}
         <div className="hidden lg:flex items-center gap-3">
-          <a href="https://wa.me/51923341098" target="_blank" rel="noopener noreferrer">
+          <a 
+            href="https://wa.me/51923341098" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick('header_desktop')}
+          >
             <Button className="flex items-center gap-2 font-normal">
               CONTACTANOS
               <Image 
@@ -129,7 +135,12 @@ export const Header = () => {
         {/* Mobile Actions Container */}
         <div className="flex lg:hidden items-center gap-2">
           {/* Quick Contact Button (Small) */}
-          <a href="https://wa.me/51923341098" target="_blank" rel="noopener noreferrer">
+          <a 
+            href="https://wa.me/51923341098" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            onClick={() => trackWhatsAppClick('header_mobile')}
+          >
             <Button size="sm" className="px-3 h-10">
               <Image 
                 src="/icons/icono-whatsapp-azul-eca.svg" 
@@ -179,16 +190,24 @@ export const Header = () => {
           <Link href="/nosotros" className="text-primary-700 font-medium py-2 border-b border-gray-50">Nosotros</Link>
           <Link href="/blog" className="text-primary-700 font-medium py-2 border-b border-gray-50">Blog</Link>
           <div className="flex flex-col gap-3 mt-4">
-            <Button className="w-full justify-center">
-              CONTACTANOS
-              <Image 
-                src="/icons/icono-whatsapp-azul-eca.svg" 
-                alt="Contacto WhatsApp ECA" 
-                width={20} 
-                height={20} 
-                className="brightness-0 invert ml-2" 
-              />
-            </Button>
+            <a 
+              href="https://wa.me/51923341098" 
+              target="_blank" 
+              rel="noopener noreferrer" 
+              onClick={() => trackWhatsAppClick('header_mobile_menu')}
+              className="w-full"
+            >
+              <Button className="w-full justify-center">
+                CONTACTANOS
+                <Image 
+                  src="/icons/icono-whatsapp-azul-eca.svg" 
+                  alt="Contacto WhatsApp ECA" 
+                  width={20} 
+                  height={20} 
+                  className="brightness-0 invert ml-2" 
+                />
+              </Button>
+            </a>
             <Link href="/contactanos" className="w-full">
               <Button variant="outline" className="w-full justify-center">
                 AGENDA TU CITA

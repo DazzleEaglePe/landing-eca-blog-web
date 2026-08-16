@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { Volume2, VolumeX } from 'lucide-react';
 import { Button } from '@/components/atoms/Button';
 import { Services } from '../Services';
+import { trackWhatsAppClick } from '@/lib/gtag';
 
 const features = [
   { text: "Cumplimiento de la", bold: "normativa legal y tributaria." },
@@ -166,7 +167,13 @@ export const ServiceAction = () => {
 
               {/* CTA Button at bottom-right */}
               <div className="absolute bottom-6 right-6 z-10">
-                <button className="bg-white hover:bg-white/90 text-[#0049B2] flex items-center justify-center gap-2 font-medium text-xs md:text-sm px-5 py-3 rounded-full shadow-lg transition-all whitespace-nowrap">
+                <a
+                  href="https://wa.me/51923341098"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => trackWhatsAppClick('video_action')}
+                  className="bg-white hover:bg-white/90 text-[#0049B2] flex items-center justify-center gap-2 font-medium text-xs md:text-sm px-5 py-3 rounded-full shadow-lg transition-all whitespace-nowrap"
+                >
                   CONOCE MÁS AQUÍ
                   <Image
                     src="/icons/icono-whatsapp-azul-eca.svg"
@@ -174,7 +181,7 @@ export const ServiceAction = () => {
                     width={18}
                     height={18}
                   />
-                </button>
+                </a>
               </div>
             </div>
           </div>

@@ -5,7 +5,7 @@ import { Header } from "@/components/organisms/Header";
 import { Footer } from "@/components/organisms/Footer";
 import { FloatingWhatsApp } from "@/components/molecules/FloatingWhatsApp";
 import { Analytics } from "@vercel/analytics/react";
-import Script from "next/script";
+import { GoogleAnalytics } from "@next/third-parties/google";
 
 const madeTommy = localFont({
   src: [
@@ -117,34 +117,17 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const gaId = process.env.NEXT_PUBLIC_GA_ID;
+  const gaId = process.env.NEXT_PUBLIC_GA_ID || "G-HY3D1HHLNY";
 
   return (
     <html lang="es" className={`${madeTommy.variable} h-full antialiased`}>
       <body className="min-h-full flex flex-col font-sans">
-        {gaId && (
-          <>
-            <Script
-              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
-              strategy="afterInteractive"
-            />
-            <Script id="google-analytics" strategy="afterInteractive">
-              {`
-                window.dataLayer = window.dataLayer || [];
-                function gtag(){dataLayer.push(arguments);}
-                gtag('js', new Date());
-                gtag('config', '${gaId}', {
-                  page_path: window.location.pathname,
-                });
-              `}
-            </Script>
-          </>
-        )}
         <Header />
         {children}
         <Footer />
         <FloatingWhatsApp />
         <Analytics />
+        <GoogleAnalytics gaId={gaId} />
       </body>
     </html>
   );

@@ -2,6 +2,7 @@
 
 import React, { useState, useRef } from "react";
 import Image from "next/image";
+import { trackWhatsAppClick } from "@/lib/gtag";
 
 const services = [
   {
@@ -221,6 +222,7 @@ export const ServicesTabs = () => {
               href={`https://wa.me/${process.env.NEXT_PUBLIC_WHATSAPP ?? "51923341098"}`}
               target="_blank"
               rel="noopener noreferrer"
+              onClick={() => trackWhatsAppClick('servicios_tabs')}
               className="inline-flex items-center gap-6 bg-[#0049B2] hover:bg-[#003d99] text-white text-base md:text-lg font-normal pl-10 pr-6 py-4 rounded-full transition-colors group self-start"
             >
               Recibir más información
